@@ -32,7 +32,7 @@
 
     for (let i=0; i<movies.length; i++) {
       let movie = movies[i]
-      let docRef = await db.collection('watched').doc(`${movie.id}-${user.Id}`).get()
+      let docRef = await db.collection('watched').doc(`${movie.id}-${user.id}`).get()
       let watchedMovie = docRef.data()
       let opacityClass = ''
       if (watchedMovie) {
